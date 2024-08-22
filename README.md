@@ -1,50 +1,41 @@
-# React + TypeScript + Vite
+### COMPONENTS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Decentralized Identity (DI)
 
-Currently, two official plugins are available:
+- **Core Components:** Identity data (name, date of birth, address, etc.), public key, private key, and associated credentials.
+- **Data Storage:** Distributed storage solution (IPFS, P2P, or blockchain-based storage) for data redundancy and security.
+- **Identity Wallet:** A user-friendly interface for managing identity data and credentials.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Decentralized Domain (DD)
 
-## Expanding the ESLint configuration
+- **Domain Registration:** Integration with a decentralized domain registry (Unstoppable Domains or similar).
+- **Domain Resolution:** Mapping the decentralized domain to the user's identity.
+- **Ownership Verification:** Ensuring secure ownership of the domain.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Cross-Chain Interoperability (Wormhole)
 
-- Configure the top-level `parserOptions` property like this:
+- **Message Passing:** Facilitating secure and reliable communication between Ethereum and Solana for initial tests.
+- **Asset Transfer:** Enabling the transfer of tokens or other assets between chains.
+- **Data Synchronization:** Ensuring consistency of identity data across different blockchains.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Blockchains (Ethereum, Solana)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Smart Contracts:** Deploying contracts for identity management, credential issuance, and verification.
+- **Tokenization:** Potential use of tokens for identity verification or access control.
+- **Security:** Implementing robust security measures (e.g., multi-sig wallets, access controls).
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Credential Management
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Credential Standards:** Adhering to industry standards (W3C Verifiable Credentials, etc.).
+- **Issuance and Verification:** Processes for issuing, storing, and verifying credentials.
+- **Revocation:** Mechanism for revoking compromised credentials.
+
+### Identity Provider (IDP)
+
+- **Role:** Manages identity creation, updates, and verification.
+- **Interactions:** Interact with the user, decentralized domain registry, and blockchain.
+
+### Verifier (VR)
+
+- **Role:** Validate identity and credentials.
+- **Interactions:** Interact with the user, identity provider, and blockchain.
